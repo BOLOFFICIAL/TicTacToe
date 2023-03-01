@@ -1,13 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TicTacToe
@@ -53,7 +46,7 @@ namespace TicTacToe
             count_free--;
             cheack = CheckWin();
             endgame = (count_free == 0) || cheack;
-            if (count_free == 0 && cheack == false) 
+            if (count_free == 0 && cheack == false)
             {
                 winner = "НИЧЬЯ";
             }
@@ -83,7 +76,7 @@ namespace TicTacToe
             Logic((Button)sender);
         }
 
-        private bool CheckWin() 
+        private bool CheckWin()
         {
             if (points[0, 0] == points[0, 1] && points[0, 0] == points[0, 2])
             {
